@@ -5,6 +5,7 @@ import Router from 'sheet-router'
 import { createStore } from 'redux'
 
 import Login from './components/login'
+import BizzList from './components/bizzList'
 
 var reducer = require('./reducer')
 
@@ -14,6 +15,8 @@ document.querySelector('main').appendChild(app)
 const initialState = {
   title: "Bizz-Buzz",
   route: '/',
+  loginDetails: {},
+  user: {}
 }
 
 var store = createStore(reducer, initialState)
@@ -21,11 +24,12 @@ const {getState, dispatch, subscribe} = store
 
 
 const route = Router({ default: '/404' }, [
-  ['/', (params) => Login]
+  ['/', (params) => Login],
+  ['/bizzList', (params) => BizzList]
 ])
 
 subscribe(() => {
-  console.log(getState.route);
+  console.log(getState().route);
   const Component = route(getState().route)
   render(<Component state={getState()} dispatch={dispatch} />, app)
 })
