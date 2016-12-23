@@ -4,7 +4,7 @@ import url from '../requestUrl'
 module.exports = ({loginDetails}, dispatch) => {
   const {username, password} = loginDetails
   request
-    .post(`http://localhost:3000/api/v1/users/login`)
+    .post(`${url}users/login`)
     .send({username, password})
     .withCredentials()
     .end((err, res) => {

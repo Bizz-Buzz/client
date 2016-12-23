@@ -18,6 +18,7 @@ const initialState = {
   route: '/',
   loginDetails: {},
   signupDetails: {},
+  authError: null,
   user: {}
 }
 

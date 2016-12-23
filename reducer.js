@@ -4,6 +4,9 @@ module.exports = (state, action) => {
   var newState = clone(state)
   const {payload, type} = action
   switch (type) {
+    case "AUTH_ERROR":
+      newState.authError = payload
+      return newState
     case 'UPDATE_LOGIN_DETAILS':
       newState.loginDetails[payload.change] = payload.value
       return newState
@@ -15,8 +18,13 @@ module.exports = (state, action) => {
       newState.user = payload
       newState.route = '/bizzList'
       return newState
+    case 'SIGNUP_SUCCESS':
+      newState.route = '/login'
+      newState.authError = "Signup Successful, please log in"
+      return newState
     case 'CHANGE_ROUTE':
       newState.route = payload
+      newState.authError = null
       return newState
     default:
       return newState
