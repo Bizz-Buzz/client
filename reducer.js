@@ -15,7 +15,8 @@ module.exports = (state, action) => {
       console.log(newState.signupDetails);
       return newState
     case 'LOGIN_SUCCESS':
-      newState.user = payload
+      newState.user = payload.user
+      newState.bizzList = payload.bizz_list
       newState.route = '/bizzList'
       return newState
     case 'SIGNUP_SUCCESS':

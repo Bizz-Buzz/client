@@ -9,7 +9,7 @@ module.exports = ({loginDetails}, dispatch) => {
     .withCredentials()
     .end((err, res) => {
       if (!err) {
-       dispatch({ type: 'LOGIN_SUCCESS', payload: res.body.user })
+       dispatch({ type: 'LOGIN_SUCCESS', payload: res.body })
      }
      else dispatch({ type: 'CHANGE_ROUTE', payload: '/' })
     })

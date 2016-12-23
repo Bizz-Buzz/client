@@ -7,7 +7,6 @@ module.exports = ({state, dispatch}) => {
   const savePassword = (e) => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {change: 'password', value: e.target.value}})
   const loginButton = (e) => {
     e.preventDefault()
-    dispatch({type: 'CHANGE_ROUTE', payload: '/loading'})
     loginService(state, dispatch)
   }
   return (

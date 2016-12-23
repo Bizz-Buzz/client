@@ -19,7 +19,8 @@ const initialState = {
   loginDetails: {},
   signupDetails: {},
   authError: null,
-  user: {}
+  user: {},
+  bizzList: []
 }
 
 var store = createStore(reducer, initialState)
