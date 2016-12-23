@@ -7,13 +7,13 @@ module.exports = ({state, dispatch}) => {
   const savePassword = (e) => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {change: 'password', value: e.target.value}})
   const loginButton = (e) => {
     e.preventDefault()
-    dispatch({type: 'CHANGE_ROUTE', payload: '/loading'})
     loginService(state, dispatch)
   }
   return (
     <div>
       <h1>Login</h1>
       <form>
+        {state.authError ? <h1>{state.authError}</h1> : ""}
         <input onChange={saveEmail} type="text" placeholder="Email Address" />
         <input onChange={savePassword} type="password" placeholder="Password" />
         <button className="buttons" onClick={loginButton} type="submit">Log in</button>
