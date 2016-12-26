@@ -1,4 +1,64 @@
-main {
-  text-align: center; }
+.accDetsInput, .accDetsInputLast {
+  width: 90%;
+  background-color: #243757;
+  border: none;
+  border-bottom: 3px solid #cbcbcb;
+  color: #666666;
+  font-size: 1.5em; }
+
+.accDetsInputLast {
+  border-bottom: none; }
+
+.accInputDiv {
+  height: 40vh;
+  margin-left: 10%; }
+
+::-webkit-input-placeholder {
+  color: #666666;
+  font-family: "Raleway", sans-serif; }
+
+.bigButton, .smallButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  background-color: #243757;
+  border: 5px solid #cbcbcb;
+  padding: 0;
+  color: #cbcbcb;
+  width: 80%;
+  height: 10vh;
+  margin-left: 10%;
+  margin-bottom: 3vh; }
+
+.smallButton {
+  width: 65%;
+  margin-left: 17.5%;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3em;
+  height: 7vh;
+  margin-bottom: 5vh; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #243757; }
+
+.headings, .mainHeading, .subHeading, .authErrorMsg {
+  margin: 0;
+  color: #cbcbcb;
+  margin-left: 10%; }
+
+.mainHeading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3em; }
+
+.subHeading, .authErrorMsg {
+  font-size: 0.8em; }
+
+.headingDiv {
+  margin-top: 5vh;
+  height: 30vh; }
+
+.authErrorMsg {
+  color: red;
+  font-size: 1em; }
 
 /*# sourceMappingURL=index.css.map */
