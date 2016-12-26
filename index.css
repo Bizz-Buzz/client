@@ -58,6 +58,7 @@ body {
   height: 30vh; }
 
 .authErrorMsg {
-  color: red; }
+  color: red;
+  font-size: 1em; }
 
 /*# sourceMappingURL=index.css.map */
