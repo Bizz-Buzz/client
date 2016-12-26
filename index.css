@@ -1,6 +1,6 @@
 .accDetsInput, .accDetsInputLast {
   width: 90%;
-  background-color: #253858;
+  background-color: #243757;
   border: none;
   border-bottom: 3px solid #cbcbcb;
   color: #666666;
@@ -20,7 +20,7 @@
 .bigButton, .smallButton {
   font-family: "Open Sans", sans-serif;
   font-size: 2em;
-  background-color: #253858;
+  background-color: #243757;
   border: 5px solid #cbcbcb;
   padding: 0;
   color: #cbcbcb;
@@ -39,7 +39,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #253858; }
+  background-color: #243757; }
 
 .headings, .mainHeading, .subHeading, .authErrorMsg {
   margin: 0;
