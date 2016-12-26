@@ -4,7 +4,8 @@
   border: none;
   border-bottom: 3px solid #cbcbcb;
   color: #666666;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  font-family: "Raleway", sans-serif; }
 
 .accDetsInputLast {
   border-bottom: none; }
