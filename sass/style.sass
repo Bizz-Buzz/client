@@ -1,2 +1,29 @@
-main
-  text-align: center
+@import pages/login
+@import helpers/variables
+
+body
+  font-family: $textFont
+  background-color: $navyColor
+
+.headings
+  margin: 0
+  color: $lightGrey
+  margin-left: 10%
+
+.mainHeading
+  @extend .headings
+  font-family: $headingFont
+  font-size: 3em
+
+.subHeading
+  @extend .headings
+  font-size: 0.8em
+
+.headingDiv
+  margin-top: 5vh
+  height: 30vh
+
+.authErrorMsg
+  @extend .subHeading
+  color: red
+  font-size: 1em
