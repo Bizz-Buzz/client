@@ -13,17 +13,21 @@ module.exports = ({ state, dispatch }) => {
   }
   return (
     <div className='signUp'>
-    <h1>Create Account</h1>
+      <div className='headingDiv'>
+        <h1 className="mainHeading">CREATE ACCOUNT</h1>
+      </div>
       <form>
         {state.authError ? <h1>{state.authError}</h1> : ""}
-        <input onChange={saveEmail} type='text' placeholder='Email' />
-        <input onChange={savePassword} type='password' placeholder='Password' />
-        <input onChange={saveConfirmPassword} type='password' placeholder='Confirm Password' />
-        <input onChange={saveFirstName} type='text' placeholder="First Name" />
-        <input onChange={saveLastName} type="text" placeholder="Last Name" />
-        <button className='buttons' onClick={authorizeSignUp} type='submit'>Sign Up</button>
+        <div className="accInputDiv">
+          <input className="accDetsInput" onChange={saveEmail} type='text' placeholder='Email' />
+          <input className="accDetsInput" onChange={savePassword} type='password' placeholder='Password' />
+          <input className="accDetsInput" onChange={saveConfirmPassword} type='password' placeholder='Confirm Password' />
+          <input className="accDetsInput" onChange={saveFirstName} type='text' placeholder="First Name" />
+          <input className="accDetsInputLast" onChange={saveLastName} type="text" placeholder="Last Name" />
+        </div>
+        <button className='bigButton' onClick={authorizeSignUp} type='submit'>Sign Up</button>
       </form>
-      <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})} type='submit'>Cancel</button>
+      <button className='smallButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})} type='submit'>Cancel</button>
     </div>
   )
 }

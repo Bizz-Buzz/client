@@ -2,8 +2,23 @@
 @import helpers/variables
 
 body
-  text-align: center
-  font-family: 'Dosis', sans-serif
+  font-family: $textFont
+  background-color: $navyColor
 
-h1
+.headings
   margin: 0
+  color: $lightGrey
+  margin-left: 10%
+
+.mainHeading
+  @extend .headings
+  font-family: $headingFont
+  font-size: 3em
+
+.subHeading
+  @extend .headings
+  font-size: 0.8em
+
+.headingDiv
+  margin-top: 5vh
+  height: 30vh
