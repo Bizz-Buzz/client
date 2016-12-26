@@ -5,3 +5,6 @@ npm-debug.log*
 
 .DS_Store
 /dist
+index.css
+.sass-cache
+index.css.map
