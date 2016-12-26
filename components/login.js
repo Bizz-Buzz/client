@@ -14,8 +14,8 @@ module.exports = ({state, dispatch}) => {
       <h1>Login</h1>
       <form>
         {state.authError ? <h1>{state.authError}</h1> : ""}
-        <input onChange={saveEmail} type="text" placeholder="Email Address" />
-        <input onChange={savePassword} type="password" placeholder="Password" />
+        <input className="loginInput" onChange={saveEmail} type="text" placeholder="Email Address" />
+        <input className="loginInput" onChange={savePassword} type="password" placeholder="Password" />
         <button className="buttons" onClick={loginButton} type="submit">Log in</button>
       </form>
       <button className='buttons' onClick={goToSignUp}>Create Account</button>

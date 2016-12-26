@@ -1,4 +1,11 @@
-main {
-  text-align: center; }
+.loginInput {
+  width: 80%; }
+
+body {
+  text-align: center;
+  font-family: "Dosis", sans-serif; }
+
+h1 {
+  margin: 0; }
 
 /*# sourceMappingURL=index.css.map */
