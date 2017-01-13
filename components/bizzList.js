@@ -6,7 +6,7 @@ module.exports = ({state, dispatch}) => {
   function BizzList() {
     console.log("bizz render state", {state});
     return state.bizzList.map((bizz)=>{
-      return <div onClick={() => viewBizz(bizz.bizz_name, dispatch)}>{bizz.bizz_name}</div>
+      return <div className="bizzItem" onClick={() => viewBizz(bizz.bizz_name, dispatch)}>{bizz.bizz_name}</div>
     })
   }
   return (
