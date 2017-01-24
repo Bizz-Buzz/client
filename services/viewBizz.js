@@ -7,7 +7,7 @@ module.exports = (bizz_name, dispatch) => {
     .query({bizz_name})
     .withCredentials()
     .end((err, res) => {
-      console.log(res);
+      console.log({res});
+      if (!err) dispatch({type: "VIEW_BIZZ", payload: res.body})
     })
-  console.log(`Requesting data for the ${bizz_name} bizz`);
 }

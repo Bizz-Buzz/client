@@ -27,6 +27,11 @@ module.exports = (state, action) => {
       newState.route = payload
       newState.authError = null
       return newState
+    case 'VIEW_BIZZ':
+      newState.bizz = payload
+      newState.bizz.view = 'buzzList'
+      newState.route = '/viewBizz'
+      return newState
     default:
       return newState
   }
