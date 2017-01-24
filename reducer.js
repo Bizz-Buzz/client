@@ -40,6 +40,11 @@ module.exports = (state, action) => {
       newState.bizz.buzzList = payload
       newState.isLoading = false
       return newState
+    case 'TOGGLE_BUZZ_POST':
+      newState.buzzShow = !newState.buzzShow
+    case 'SAVE_BUZZ_POST':
+      newState.buzz_text = payload
+      return newState
     default:
       return newState
   }

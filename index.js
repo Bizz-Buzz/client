@@ -23,8 +23,8 @@ const initialState = {
   authError: null,
   user: {},
   bizzList: [],
-  bizz: null
-
+  bizz: null,
+  buzzShow: false
 }
 
 var store = createStore(reducer, initialState)
