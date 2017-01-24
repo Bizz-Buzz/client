@@ -1,12 +1,14 @@
 import React from 'react'
-import viewBizz from '../services/viewBizz'
 
 
 module.exports = ({state, dispatch}) => {
+  function viewBizz (bizz, dispatch) {
+    dispatch({type:"VIEW_BIZZ", payload: bizz})
+  }
   function BizzList() {
     console.log("bizz render state", {state});
     return state.bizzList.map((bizz)=>{
-      return <div onClick={() => viewBizz(bizz.bizz_name, dispatch)}>{bizz.bizz_name}</div>
+      return <div onClick={() => viewBizz(bizz, dispatch)}>{bizz.bizz_name}</div>
     })
   }
   return (
