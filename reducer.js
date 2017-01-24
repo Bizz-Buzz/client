@@ -4,6 +4,10 @@ module.exports = (state, action) => {
   var newState = clone(state)
   const {payload, type} = action
   switch (type) {
+    case "TOGGLE_LOADING":
+      console.log("loading toggled");
+      newState.isLoading = !newState.isLoading
+      return newState
     case "AUTH_ERROR":
       newState.authError = payload
       return newState
@@ -31,6 +35,10 @@ module.exports = (state, action) => {
       newState.bizz = payload
       newState.bizz.view = 'buzzList'
       newState.route = '/viewBizz'
+      return newState
+    case 'GET_BUZZ_LIST':
+      newState.bizz.buzzList = payload
+      newState.isLoading = false
       return newState
     default:
       return newState

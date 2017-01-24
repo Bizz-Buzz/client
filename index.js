@@ -17,6 +17,7 @@ document.querySelector('main').appendChild(app)
 const initialState = {
   title: "Bizz-Buzz",
   route: '/',
+  isLoading: false,
   loginDetails: {},
   signupDetails: {},
   authError: null,

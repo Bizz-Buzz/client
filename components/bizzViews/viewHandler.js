@@ -5,6 +5,6 @@ module.exports = (state, dispatch) => {
   switch (state.bizz.bizzView) {
     default:
     console.log("handling view");
-      return BuzzList(state,dispatch)
+      return BuzzList(state, dispatch)
   }
 }

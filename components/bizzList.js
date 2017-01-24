@@ -1,9 +1,10 @@
 import React from 'react'
-
+import LoadBuzzList from '../services/loadBuzzList'
 
 module.exports = ({state, dispatch}) => {
   function viewBizz (bizz, dispatch) {
     dispatch({type:"VIEW_BIZZ", payload: bizz})
+    LoadBuzzList(bizz.bizz_id, dispatch)
   }
   function BizzList() {
     console.log("bizz render state", {state});
