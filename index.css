@@ -85,15 +85,36 @@ body {
   color: #cbcbcb; }
 
 .buzzText {
-  color: hotpink; }
+  font-size: 1.3em;
+  color: #cbcbcb;
+  margin-bottom: 2px; }
+
+.buzzItem {
+  border: 2px solid #666666;
+  border-radius: 5px;
+  margin-bottom: 5px; }
 
 .buzzPostTime {
-  color: orange; }
+  font-size: 0.8em;
+  color: #666666;
+  text-align: right; }
 
 .thing1 {
-  color: lime; }
+  color: #cbcbcb; }
 
 .thing2 {
-  color: skyblue; }
+  color: #666666; }
+
+.buzzList {
+  text-align: center; }
+
+.bizz {
+  text-align: center; }
+
+#createBuzzButton {
+  margin: 0;
+  margin-bottom: 2vh; }
+  #createBuzzButton:focus {
+    outline: none; }
 
 /*# sourceMappingURL=index.css.map */
