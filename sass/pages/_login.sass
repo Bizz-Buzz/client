@@ -21,13 +21,16 @@
   color: $darkGrey
   font-family: $textFont
 
-.bigButton
-  font-family: $headingFont
-  font-size: 2em
+.allButtons
   background-color: $navyColor
   border: 5px solid $lightGrey
   padding: 0
   color: $lightGrey
+
+.bigButton
+  @extend .allButtons
+  font-family: $headingFont
+  font-size: 2em
   width: 80%
   height: 10vh
   margin-left: 10%

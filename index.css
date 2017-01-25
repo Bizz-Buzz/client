@@ -18,13 +18,15 @@
   color: #666666;
   font-family: "Raleway", sans-serif; }
 
-.bigButton, .smallButton {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2em;
+.allButtons, .bigButton, .smallButton {
   background-color: #243757;
   border: 5px solid #cbcbcb;
   padding: 0;
-  color: #cbcbcb;
+  color: #cbcbcb; }
+
+.bigButton, .smallButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
   width: 80%;
   height: 10vh;
   margin-left: 10%;
@@ -42,7 +44,7 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #243757; }
 
-.headings, .mainHeading, .subHeading, .authErrorMsg {
+.headings, .mainHeading, .subHeading, .authErrorMsg, .greeting {
   margin: 0;
   color: #cbcbcb;
   margin-left: 10%; }
@@ -61,5 +63,37 @@ body {
 .authErrorMsg {
   color: red;
   font-size: 1em; }
+
+.greeting {
+  margin-left: 0;
+  text-align: center;
+  font-size: 1.9em;
+  font-family: "Open Sans", sans-serif; }
+
+#greetingName {
+  margin-bottom: 5vh; }
+
+.bizzListItem {
+  text-align: center;
+  margin: auto;
+  border: 5px solid #cbcbcb;
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7em;
+  color: #cbcbcb; }
+
+.buzzText {
+  color: hotpink; }
+
+.buzzPostTime {
+  color: orange; }
+
+.thing1 {
+  color: lime; }
+
+.thing2 {
+  color: skyblue; }
 
 /*# sourceMappingURL=index.css.map */
