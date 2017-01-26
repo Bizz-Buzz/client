@@ -18,7 +18,7 @@
   color: #666666;
   font-family: "Raleway", sans-serif; }
 
-.allButtons, .bigButton, .smallButton {
+.allButtons, .bigButton, .smallButton, .makeABuzz {
   background-color: #243757;
   border: 5px solid #cbcbcb;
   padding: 0;
@@ -77,7 +77,8 @@ body {
   margin: auto; }
 
 #greetingName {
-  margin-bottom: 5vh; }
+  margin-bottom: 5vh;
+  font-size: 1em; }
 
 .bizzListItem {
   text-align: center;
@@ -88,7 +89,8 @@ body {
   padding-bottom: 15px;
   font-family: "Raleway", sans-serif;
   font-size: 1.7em;
-  color: #cbcbcb; }
+  color: #cbcbcb;
+  margin-bottom: 10px; }
 
 .buzzText {
   font-size: 1.3em;
@@ -129,7 +131,7 @@ body {
   text-align: center;
   margin: auto;
   width: 80%;
-  height: 80vh;
+  height: 70vh;
   overflow-y: scroll; }
 
 .bizz {
@@ -146,15 +148,28 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #cbcbcb; }
+  background-color: #cbcbcb;
+  height: 10vh; }
 
 .footerIcon {
   width: 15vw;
   margin-left: 15vw;
   margin-right: 15vw; }
 
-#backIcon {
-  width: 10vw;
+.backIcon {
+  height: 7vh;
   float: left; }
+
+.header {
+  height: 15vh; }
+
+.makeABuzz {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 1em; }
 
 /*# sourceMappingURL=index.css.map */

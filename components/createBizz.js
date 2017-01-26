@@ -14,7 +14,7 @@ module.exports = ({state, dispatch}) => {
       <form>
         {state.authError ? <p className="authErrorMsg" >{state.authError}</p> : ""}
         <div className="accInputDiv">
-          <input className="bizzNameInput" onChange={saveBizzName} type="text" placeholder="Bizz Name" />
+          <input className="accDetsInput" onChange={saveBizzName} type="text" placeholder="Bizz Name" />
         </div>
         <button className='bigButton' onClick={submit} type='submit'>Create Bizz</button>
       </form>

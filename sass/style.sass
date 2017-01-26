@@ -42,6 +42,7 @@ body
 
 #greetingName
   margin-bottom: 5vh
+  font-size: 1em
 
 .bizzListItem
   text-align: center
@@ -53,6 +54,7 @@ body
   font-family: $textFont
   font-size: 1.7em
   color: $lightGrey
+  margin-bottom: 10px
 
 .buzzText
   font-size: 1.3em
@@ -93,7 +95,7 @@ body
   text-align: center
   margin: auto
   width: 80%
-  height: 80vh
+  height: 70vh
   overflow-y: scroll
 
 .bizz
@@ -111,12 +113,26 @@ body
   bottom: 0
   left: 0
   background-color: $lightGrey
+  height: 10vh
 
 .footerIcon
   width: 15vw
   margin-left: 15vw
   margin-right: 15vw
 
-#backIcon
-  width: 10vw
+.backIcon
+  height: 7vh
   float: left
+
+.header
+  height: 15vh
+
+.makeABuzz
+  @extend .allButtons
+  font-family: $textFont
+  font-size: 1em
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  padding-left: 1em
+  padding-right: 1em
+  margin: 1em
