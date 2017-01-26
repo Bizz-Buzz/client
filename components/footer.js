@@ -1,4 +1,5 @@
 import React from 'react'
+import LoadSettings from '../services/loadSettings'
 
 module.exports = (state, dispatch) => {
   function goBack() {
@@ -13,7 +14,7 @@ module.exports = (state, dispatch) => {
           <span className="BuzzMenu" onClick={() => changeBizzView('buzzView')}>Buzz</span>
           -  <span className="ColoneyMenu" onClick={() => changeBizzView('coloneyView')}>Coloney</span>
           -  <span className="CalenderMenu" onClick={() => changeBizzView('calenderView')}>Calender</span>
-          -  <span className="SettingsMenu" onClick={() => changeBizzView('bizzSettingsView')}>Settings</span>
+          -  <span className="SettingsMenu" onClick={() => LoadSettings(state, dispatch)}>Settings</span>
         </p>
     </div>
   )
