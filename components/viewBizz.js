@@ -1,12 +1,14 @@
 import React from 'react'
 import ViewHandler from './bizzViews/viewHandler'
 import header from './header'
+import footer from './footer'
 
 module.exports = ({state, dispatch}) => {
   return (
     <div className="bizz">
       {header(state.bizz.bizz_name, state.bizz.bizzView, '/bizzList', dispatch)}
       {ViewHandler(state,dispatch)}
+      {footer(state, dispatch)}
     </div>
   )
 }

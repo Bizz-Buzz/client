@@ -1,5 +1,6 @@
 import React from 'react'
 import RequestBizz from '../services/requestBizz'
+import header from './header'
 
 module.exports = ({state, dispatch}) => {
   console.log({state});
@@ -21,7 +22,7 @@ module.exports = ({state, dispatch}) => {
   }
   return (
     <div className="bizzList">
-      <div><p className="greeting">Select a Bizz to request to join it</p></div>
+      {header('Bizz-Buzz', 'Select a Bizz', '/bizzList', dispatch)}
       {BizzList()}
     </div>
   )
