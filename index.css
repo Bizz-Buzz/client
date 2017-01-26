@@ -100,10 +100,14 @@ body {
   text-align: right; }
 
 .thing1 {
-  color: #cbcbcb; }
+  color: #cbcbcb;
+  margin: 0;
+  margin-bottom: 3px; }
 
 .thing2 {
-  color: #666666; }
+  color: #666666;
+  margin: 0;
+  margin-bottom: 20px; }
 
 .buzzList {
   text-align: center; }
