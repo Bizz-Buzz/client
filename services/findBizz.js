@@ -3,7 +3,7 @@ import url from '../requestUrl'
 
 module.exports = (state, dispatch) => {
   request
-    .get(`${url}bizz`)
+    .get(`${url}bizz/find`)
     .withCredentials()
     .end((err, res) => {
       if(err) console.log(err);

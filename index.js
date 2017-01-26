@@ -26,7 +26,8 @@ const initialState = {
   bizzList: [],
   allBizzList: [],
   bizz: null,
-  buzzShow: false
+  buzzShow: false,
+  followRequests: []
 }
 
 var store = createStore(reducer, initialState)

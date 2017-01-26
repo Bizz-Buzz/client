@@ -46,9 +46,23 @@ module.exports = (state, action) => {
     case 'SAVE_BUZZ_POST':
       newState.buzz_text = payload
       return newState
+    case 'POST_BUZZ':
+      newState.bizz.buzzList.unshift({
+        buzz_id: payload,
+        buzz_text: newState.buzz_text,
+        buzz_created_at: "Just Now",
+        first_name: newState.user.first_name,
+        last_name: newState.user.last_name,
+        bizz_id: newState.bizz.bizz_id
+      })
+      return newState
     case 'RECIEVE_ALL_BIZZ':
-      newState.allBizzList = payload
+      newState.allBizzList = payload.all_bizz_list
+      newState.followRequests = payload.requests
       newState.route = '/findBizz'
+      return newState
+    case 'REQUEST_BIZZ':
+      newState.followRequests.push(payload)
       return newState
     default:
       return newState
