@@ -8,7 +8,7 @@ module.exports = (state, dispatch) => {
     .send({bizz_name: state.createBizzName})
     .withCredentials()
     .end((err, res) => {
-      if (!err) dispatch({type: 'CREATE_BIZZ', payload: res.body})
+      if (!err) dispatch({type: 'CREATE_BIZZ', payload: res.body.bizz})
       else console.log(err);
     })
 }
