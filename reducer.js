@@ -42,8 +42,13 @@ module.exports = (state, action) => {
       return newState
     case 'TOGGLE_BUZZ_POST':
       newState.buzzShow = !newState.buzzShow
+      return newState
     case 'SAVE_BUZZ_POST':
       newState.buzz_text = payload
+      return newState
+    case 'RECIEVE_ALL_BIZZ':
+      newState.allBizzList = payload
+      newState.route = '/findBizz'
       return newState
     default:
       return newState

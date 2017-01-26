@@ -8,6 +8,7 @@ import Login from './components/login'
 import Signup from './components/signup'
 import BizzList from './components/bizzList'
 import ViewBizz from './components/viewBizz'
+import FindBizz from './components/findBizz'
 
 var reducer = require('./reducer')
 
@@ -23,6 +24,7 @@ const initialState = {
   authError: null,
   user: {},
   bizzList: [],
+  allBizzList: [],
   bizz: null,
   buzzShow: false
 }
@@ -35,7 +37,8 @@ const route = Router({ default: '/404' }, [
   ['/', (params) => Login],
   ['/signUp', (params) => Signup],
   ['/bizzList', (params) => BizzList],
-  ['/viewBizz', (params) => ViewBizz]
+  ['/viewBizz', (params) => ViewBizz],
+  ['/findBizz', (params) => FindBizz]
 ])
 
 subscribe(() => {
