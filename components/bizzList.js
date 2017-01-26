@@ -1,5 +1,6 @@
 import React from 'react'
 import LoadBuzzList from '../services/loadBuzzList'
+import FindBizz from '../services/findBizz'
 
 module.exports = ({state, dispatch}) => {
   function viewBizz (bizz, dispatch) {
@@ -15,11 +16,13 @@ module.exports = ({state, dispatch}) => {
   return (
     <div className="bizzList">
       <div><p className="greeting">Welcome</p><p className="greeting" id="greetingName">{state.user.first_name} {state.user.last_name}</p></div>
-      <h3>{state.bizzList.length != 0
+      <div>{state.bizzList.length != 0
         ? ""
-        : "You haven't joined a Bizz"
-      }</h3>
+        : <h3 className="bizzListItem">"You haven't joined a Bizz"</h3>}</div>
       <div>{BizzList()}</div>
+      <div className="bizzListItem">
+        <button onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button>
+      </div>
     </div>
   )
 }
