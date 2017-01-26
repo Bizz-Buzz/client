@@ -20,9 +20,7 @@ module.exports = ({state, dispatch}) => {
         ? ""
         : <h3 className="bizzListItem">"You haven't joined a Bizz"</h3>}</div>
       <div>{BizzList()}</div>
-      <div className="bizzListItem">
-        <button onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button>
-      </div>
+      <button className="smallButton" onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button>
     </div>
   )
 }
