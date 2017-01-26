@@ -29,17 +29,15 @@ module.exports = (state, dispatch) => {
   function displayBuzzPost() {
     if (state.buzzShow) {
       return <div className="bizzPost">
-        <input type="text" onChange={saveBuzzPost} placeholder="Enter post here"></input>
-        <input type="submit" onClick={() => postBuzz(state, dispatch)}></input>
+        <input className="accDetsInput" id="makeABuzzInput" type="text" onChange={saveBuzzPost} placeholder="Enter post here"></input>
+        <input className="makeABuzzSubmit" type="submit" onClick={() => postBuzz(state, dispatch)}></input>
       </div>
     }
   }
   return (
     <div className="buzzList">
-      <div className="buzzItem">
       <button className="smallButton" id="createBuzzButton" onClick={() => togglePost()}>Buzz</button>
       {displayBuzzPost()}
-      </div>
       {displayList()}
     </div>
   )

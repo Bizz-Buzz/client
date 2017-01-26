@@ -33,14 +33,17 @@ body
   font-size: 1em
 
 .greeting
-  @extend .headings
-  margin-left: 0
+  color: $lightGrey
   text-align: center
   font-size: 1.9em
   font-family: $headingFont
+  width: 80%
+  margin: auto
+  margin-left: 10px
 
 #greetingName
   margin-bottom: 5vh
+  font-size: 1em
 
 .bizzListItem
   text-align: center
@@ -52,6 +55,7 @@ body
   font-family: $textFont
   font-size: 1.7em
   color: $lightGrey
+  margin-bottom: 10px
 
 .buzzText
   font-size: 1.3em
@@ -92,7 +96,7 @@ body
   text-align: center
   margin: auto
   width: 80%
-  height: 80vh
+  height: 70vh
   overflow-y: scroll
 
 .bizz
@@ -109,6 +113,43 @@ body
   right: 0
   bottom: 0
   left: 0
-  padding: 1rem
-  background-color: #efefef
-  text-align: center
+  background-color: $lightGrey
+  height: 10vh
+
+.footerIcon
+  width: 15vw
+  margin-left: 15vw
+  margin-right: 15vw
+
+.backIcon
+  height: 7vh
+  float: left
+
+.header
+  height: 15vh
+
+.makeABuzzSubmit
+  font-family: $textFont
+  font-size: 0.7em
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  padding-left: 1em
+  padding-right: 1em
+  color: $lightGrey
+  border: 1px solid $darkGrey
+  border-radius: 100px
+  margin-left: 8px
+  background-color: $navyColor
+
+#makeABuzzInput
+  width: 60vw
+  margin-bottom: 2vh
+
+#bizzNameInput
+  margin-top: 100px
+
+.footerItem
+  margin: 3vw
+  color: $navyColor
+  font-size: 1em
+  padding: 5px

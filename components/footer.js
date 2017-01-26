@@ -11,10 +11,10 @@ module.exports = (state, dispatch) => {
   return (
     <div className="footer">
         <p>
-          <span className="BuzzMenu" onClick={() => changeBizzView('buzzView')}>Buzz</span>
-          -  <span className="ColoneyMenu" onClick={() => changeBizzView('coloneyView')}>Coloney</span>
-          -  <span className="CalenderMenu" onClick={() => changeBizzView('calenderView')}>Calender</span>
-          -  <span className="SettingsMenu" onClick={() => LoadSettings(state, dispatch)}>Settings</span>
+          <span className="footerItem" onClick={() => changeBizzView('buzzView')}>Buzz</span>
+          <span className="footerItem" onClick={() => changeBizzView('coloneyView')}>Coloney</span>
+          <span className="footerItem" onClick={() => changeBizzView('calenderView')}>Calender</span>
+          <span className="footerItem" onClick={() => LoadSettings(state, dispatch)}>Settings</span>
         </p>
     </div>
   )

@@ -16,14 +16,14 @@ module.exports = ({state, dispatch}) => {
   }
   return (
     <div className="bizzList">
-      {header('Bizz-Buzz', `Welcome ${state.user.first_name} ${state.user.last_name}`, '/', dispatch)}
+      {header('Welcome', `${state.user.first_name} ${state.user.last_name}`, '/', dispatch)}
       <div>{state.bizzList.length != 0
         ? ""
         : <h3 className="bizzListItem">"You haven't joined a Bizz"</h3>}</div>
       <div className="content">{BizzList()}</div>
       <div className="footer">
-        <span><button onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button></span>
-        <span><button onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/createBizz'})}>Create a Bizz</button></span>
+        <span><button onClick={() => FindBizz(state, dispatch)}><img className="footerIcon" src="http://images.clipartpanda.com/magnifying-glass-black-and-white-magnifying-glass-hi.png" alt="magnifying glass" title="Search"/></button></span>
+        <span><button onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/createBizz'})}><img className="footerIcon" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png" alt="plus symbol" title="Add New"/></button></span>
       </div>
     </div>
   )
