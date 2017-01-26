@@ -1,6 +1,7 @@
 import React from 'react'
 import LoadBuzzList from '../services/loadBuzzList'
 import FindBizz from '../services/findBizz'
+import header from './header'
 
 module.exports = ({state, dispatch}) => {
   function viewBizz (bizz, dispatch) {
@@ -15,7 +16,7 @@ module.exports = ({state, dispatch}) => {
   }
   return (
     <div className="bizzList">
-      <div><p className="greeting">Welcome</p><p className="greeting" id="greetingName">{state.user.first_name} {state.user.last_name}</p></div>
+      {header('Bizz-Buzz', `Welcome ${state.user.first_name} ${state.user.last_name}`, '/', dispatch)}
       <div>{state.bizzList.length != 0
         ? ""
         : <h3 className="bizzListItem">"You haven't joined a Bizz"</h3>}</div>
