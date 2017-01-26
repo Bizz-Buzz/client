@@ -18,7 +18,7 @@
   color: #666666;
   font-family: "Raleway", sans-serif; }
 
-.allButtons, .bigButton, .smallButton, .makeABuzz {
+.allButtons, .bigButton, .smallButton {
   background-color: #243757;
   border: 5px solid #cbcbcb;
   padding: 0;
@@ -74,7 +74,8 @@ body {
   font-size: 1.9em;
   font-family: "Open Sans", sans-serif;
   width: 80%;
-  margin: auto; }
+  margin: auto;
+  margin-left: 10px; }
 
 #greetingName {
   margin-bottom: 5vh;
@@ -163,13 +164,30 @@ body {
 .header {
   height: 15vh; }
 
-.makeABuzz {
+.makeABuzzSubmit {
   font-family: "Raleway", sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;
   padding-right: 1em;
-  margin: 1em; }
+  color: #cbcbcb;
+  border: 1px solid #666666;
+  border-radius: 100px;
+  margin-left: 8px;
+  background-color: #243757; }
+
+#makeABuzzInput {
+  width: 60vw;
+  margin-bottom: 2vh; }
+
+#bizzNameInput {
+  margin-top: 100px; }
+
+.footerItem {
+  margin: 3vw;
+  color: #243757;
+  font-size: 1em;
+  padding: 5px; }
 
 /*# sourceMappingURL=index.css.map */

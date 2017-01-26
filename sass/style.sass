@@ -39,6 +39,7 @@ body
   font-family: $headingFont
   width: 80%
   margin: auto
+  margin-left: 10px
 
 #greetingName
   margin-bottom: 5vh
@@ -127,12 +128,28 @@ body
 .header
   height: 15vh
 
-.makeABuzz
-  @extend .allButtons
+.makeABuzzSubmit
   font-family: $textFont
-  font-size: 1em
+  font-size: 0.7em
   padding-top: 0.5em
   padding-bottom: 0.5em
   padding-left: 1em
   padding-right: 1em
-  margin: 1em
+  color: $lightGrey
+  border: 1px solid $darkGrey
+  border-radius: 100px
+  margin-left: 8px
+  background-color: $navyColor
+
+#makeABuzzInput
+  width: 60vw
+  margin-bottom: 2vh
+
+#bizzNameInput
+  margin-top: 100px
+
+.footerItem
+  margin: 3vw
+  color: $navyColor
+  font-size: 1em
+  padding: 5px

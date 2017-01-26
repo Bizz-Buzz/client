@@ -29,8 +29,8 @@ module.exports = (state, dispatch) => {
   function displayBuzzPost() {
     if (state.buzzShow) {
       return <div className="bizzPost">
-        <input className="accDetsInput" type="text" onChange={saveBuzzPost} placeholder="Enter post here"></input>
-        <input className="makeABuzz" type="submit" onClick={() => postBuzz(state, dispatch)}></input>
+        <input className="accDetsInput" id="makeABuzzInput" type="text" onChange={saveBuzzPost} placeholder="Enter post here"></input>
+        <input className="makeABuzzSubmit" type="submit" onClick={() => postBuzz(state, dispatch)}></input>
       </div>
     }
   }
