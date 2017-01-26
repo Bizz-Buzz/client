@@ -20,9 +20,10 @@ module.exports = ({state, dispatch}) => {
       <div>{state.bizzList.length != 0
         ? ""
         : <h3 className="bizzListItem">"You haven't joined a Bizz"</h3>}</div>
-      <div>{BizzList()}</div>
-      <div className="bizzListItem">
-        <button onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button>
+      <div className="content">{BizzList()}</div>
+      <div className="footer">
+        <span><button onClick={() => FindBizz(state, dispatch)}>Find a Bizz</button></span>
+        <span><button onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/createBizz'})}>Create a Bizz</button></span>
       </div>
     </div>
   )

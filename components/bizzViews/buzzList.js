@@ -39,8 +39,10 @@ module.exports = (state, dispatch) => {
   }
   return (
     <div className="buzzList">
+      <div className="buzzItem">
       <button className="smallButton" id="createBuzzButton" onClick={() => togglePost()}>Buzz</button>
       {displayBuzzPost()}
+      </div>
       {displayList()}
     </div>
   )
