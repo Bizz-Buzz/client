@@ -6,7 +6,7 @@ import footer from './footer'
 module.exports = ({state, dispatch}) => {
   return (
     <div className="bizz">
-      {header(state.bizz.bizz_name, state.bizz.bizzView, '/bizzList', dispatch)}
+      {header(state.bizz.bizz_name, state.bizz.bizz_members + ' members', '/bizzList', dispatch)}
       {ViewHandler(state,dispatch)}
       {footer(state, dispatch)}
     </div>

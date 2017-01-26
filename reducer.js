@@ -71,6 +71,9 @@ module.exports = (state, action) => {
     case 'REQUEST_BIZZ':
       newState.followRequests.push(payload)
       return newState
+    case 'CHANGE_BIZZ_VIEW':
+      newState.bizz.bizzView = payload
+      return newState
     default:
       return newState
   }
