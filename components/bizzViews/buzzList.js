@@ -6,9 +6,9 @@ module.exports = (state, dispatch) => {
   console.log({state});
   function buzzItem(buzz) {
       return <div className="buzzItem">
-        <p className="posterName">{buzz.first_name} {buzz.last_name}</p>
         <p className="buzzText">{buzz.buzz_text}</p>
         <p className="buzzPostTime">{buzz.buzz_created_at}</p>
+        <p className="posterName">{buzz.first_name} {buzz.last_name}</p>
       </div>
   }
   function buzzList(buzzList) {
