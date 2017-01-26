@@ -4,7 +4,8 @@
   border: none;
   border-bottom: 3px solid #cbcbcb;
   color: #666666;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  font-family: "Raleway", sans-serif; }
 
 .accDetsInputLast {
   border-bottom: none; }
@@ -17,13 +18,15 @@
   color: #666666;
   font-family: "Raleway", sans-serif; }
 
-.bigButton, .smallButton {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2em;
+.allButtons, .bigButton, .smallButton {
   background-color: #243757;
   border: 5px solid #cbcbcb;
   padding: 0;
-  color: #cbcbcb;
+  color: #cbcbcb; }
+
+.bigButton, .smallButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
   width: 80%;
   height: 10vh;
   margin-left: 10%;
@@ -39,9 +42,13 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #243757; }
+  background-color: #243757;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%; }
 
-.headings, .mainHeading, .subHeading, .authErrorMsg {
+.headings, .mainHeading, .subHeading, .authErrorMsg, .greeting {
   margin: 0;
   color: #cbcbcb;
   margin-left: 10%; }
@@ -60,5 +67,71 @@ body {
 .authErrorMsg {
   color: red;
   font-size: 1em; }
+
+.greeting {
+  margin-left: 0;
+  text-align: center;
+  font-size: 1.9em;
+  font-family: "Open Sans", sans-serif; }
+
+#greetingName {
+  margin-bottom: 5vh; }
+
+.bizzListItem {
+  text-align: center;
+  margin: auto;
+  border: 5px solid #cbcbcb;
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7em;
+  color: #cbcbcb; }
+
+.buzzText {
+  font-size: 1.3em;
+  color: #cbcbcb;
+  margin-bottom: 2px; }
+
+.buzzItem {
+  border: 2px solid #666666;
+  border-radius: 5px;
+  margin-bottom: 5px; }
+
+.buzzPostTime {
+  font-size: 0.8em;
+  color: #666666;
+  text-align: right; }
+
+.thing1 {
+  color: #cbcbcb;
+  margin: 0;
+  margin-bottom: 3px; }
+
+.thing2 {
+  color: #666666;
+  margin: 0;
+  margin-bottom: 20px; }
+
+.buzzList {
+  text-align: center; }
+
+.bizz {
+  text-align: center; }
+
+#createBuzzButton {
+  margin: 0;
+  margin-bottom: 2vh; }
+  #createBuzzButton:focus {
+    outline: none; }
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
