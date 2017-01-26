@@ -36,6 +36,13 @@ module.exports = (state, action) => {
       newState.bizz.view = 'buzzList'
       newState.route = '/viewBizz'
       return newState
+    case 'UPDATE_CREATE_BIZZ_DETAILS':
+      newState.createBizzName = payload
+      return newState
+    case 'CREATE_BIZZ':
+      newState.bizzList.push(payload)
+      newState.route = '/bizzList'
+      return newState
     case 'GET_BUZZ_LIST':
       newState.bizz.buzzList = payload
       newState.isLoading = false

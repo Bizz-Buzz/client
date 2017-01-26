@@ -42,7 +42,11 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #243757; }
+  background-color: #243757;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%; }
 
 .headings, .mainHeading, .subHeading, .authErrorMsg, .greeting {
   margin: 0;

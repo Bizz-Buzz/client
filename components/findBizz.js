@@ -11,8 +11,6 @@ module.exports = ({state, dispatch}) => {
         ? "Request Sent"
         : `${bizz.bizz_members} members`
       }</h4>
-
-
     </div>
   }
   function BizzList() {
