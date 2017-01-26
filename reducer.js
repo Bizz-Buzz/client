@@ -33,7 +33,8 @@ module.exports = (state, action) => {
       return newState
     case 'VIEW_BIZZ':
       newState.bizz = payload
-      newState.bizz.view = 'buzzList'
+      newState.bizz.bizzView = 'buzzList'
+      newState.bizz.settings = {follow_requests: []}
       newState.route = '/viewBizz'
       return newState
     case 'UPDATE_CREATE_BIZZ_DETAILS':
@@ -73,6 +74,20 @@ module.exports = (state, action) => {
       return newState
     case 'CHANGE_BIZZ_VIEW':
       newState.bizz.bizzView = payload
+      return newState
+    case 'LOAD_BIZZ_SETTINGS':
+      newState.bizz.settings = payload
+      newState.bizz.bizzView = "bizzSettingsView"
+      return newState
+    case 'SELECT_REQUEST':
+      if(newState.bizz.settings.selectedRequest == payload) {
+        newState.bizz.settings.selectedRequest = null
+      } else newState.bizz.settings.selectedRequest = payload
+      return newState
+    case 'REQUEST_ACCEPTED':
+      newState.bizz.settings.follow_requests.forEach((request, index) => {
+        if (request.request_id = payload) newState.bizz.settings.follow_requests.splice(index, 1)
+      })
       return newState
     default:
       return newState
