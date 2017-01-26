@@ -48,7 +48,7 @@ body {
   padding-bottom: 6rem;
   min-height: 100%; }
 
-.headings, .mainHeading, .subHeading, .authErrorMsg, .greeting {
+.headings, .mainHeading, .subHeading, .authErrorMsg {
   margin: 0;
   color: #cbcbcb;
   margin-left: 10%; }
@@ -69,10 +69,12 @@ body {
   font-size: 1em; }
 
 .greeting {
-  margin-left: 0;
+  color: #cbcbcb;
   text-align: center;
   font-size: 1.9em;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  width: 80%;
+  margin: auto; }
 
 #greetingName {
   margin-bottom: 5vh; }
@@ -144,8 +146,15 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center; }
+  background-color: #cbcbcb; }
+
+.footerIcon {
+  width: 15vw;
+  margin-left: 15vw;
+  margin-right: 15vw; }
+
+#backIcon {
+  width: 10vw;
+  float: left; }
 
 /*# sourceMappingURL=index.css.map */

@@ -33,11 +33,12 @@ body
   font-size: 1em
 
 .greeting
-  @extend .headings
-  margin-left: 0
+  color: $lightGrey
   text-align: center
   font-size: 1.9em
   font-family: $headingFont
+  width: 80%
+  margin: auto
 
 #greetingName
   margin-bottom: 5vh
@@ -109,6 +110,13 @@ body
   right: 0
   bottom: 0
   left: 0
-  padding: 1rem
-  background-color: #efefef
-  text-align: center
+  background-color: $lightGrey
+
+.footerIcon
+  width: 15vw
+  margin-left: 15vw
+  margin-right: 15vw
+
+#backIcon
+  width: 10vw
+  float: left
