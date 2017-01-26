@@ -101,7 +101,10 @@ body {
 .buzzPostTime {
   font-size: 0.8em;
   color: #666666;
-  text-align: right; }
+  text-align: right;
+  margin-right: 10px;
+  width: 40%;
+  float: right; }
 
 .thing1 {
   color: #cbcbcb;
@@ -113,8 +116,19 @@ body {
   margin: 0;
   margin-bottom: 20px; }
 
+.posterName {
+  text-align: left;
+  color: #666666;
+  font-size: 1em;
+  margin-left: 10px;
+  width: 40%; }
+
 .buzzList {
-  text-align: center; }
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  height: 80vh;
+  overflow-y: scroll; }
 
 .bizz {
   text-align: center; }
