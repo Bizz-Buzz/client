@@ -33,8 +33,16 @@ module.exports = (state, action) => {
       return newState
     case 'VIEW_BIZZ':
       newState.bizz = payload
-      newState.bizz.view = 'buzzList'
+      newState.bizz.bizzView = 'buzzList'
+      newState.bizz.settings = {follow_requests: []}
       newState.route = '/viewBizz'
+      return newState
+    case 'UPDATE_CREATE_BIZZ_DETAILS':
+      newState.createBizzName = payload
+      return newState
+    case 'CREATE_BIZZ':
+      newState.bizzList.push(payload)
+      newState.route = '/bizzList'
       return newState
     case 'GET_BUZZ_LIST':
       newState.bizz.buzzList = payload
@@ -46,9 +54,40 @@ module.exports = (state, action) => {
     case 'SAVE_BUZZ_POST':
       newState.buzz_text = payload
       return newState
+    case 'POST_BUZZ':
+      newState.bizz.buzzList.unshift({
+        buzz_id: payload,
+        buzz_text: newState.buzz_text,
+        buzz_created_at: "Just Now",
+        first_name: newState.user.first_name,
+        last_name: newState.user.last_name,
+        bizz_id: newState.bizz.bizz_id
+      })
+      return newState
     case 'RECIEVE_ALL_BIZZ':
-      newState.allBizzList = payload
+      newState.allBizzList = payload.all_bizz_list
+      newState.followRequests = payload.requests
       newState.route = '/findBizz'
+      return newState
+    case 'REQUEST_BIZZ':
+      newState.followRequests.push(payload)
+      return newState
+    case 'CHANGE_BIZZ_VIEW':
+      newState.bizz.bizzView = payload
+      return newState
+    case 'LOAD_BIZZ_SETTINGS':
+      newState.bizz.settings = payload
+      newState.bizz.bizzView = "bizzSettingsView"
+      return newState
+    case 'SELECT_REQUEST':
+      if(newState.bizz.settings.selectedRequest == payload) {
+        newState.bizz.settings.selectedRequest = null
+      } else newState.bizz.settings.selectedRequest = payload
+      return newState
+    case 'REQUEST_ACCEPTED':
+      newState.bizz.settings.follow_requests.forEach((request, index) => {
+        if (request.request_id = payload) newState.bizz.settings.follow_requests.splice(index, 1)
+      })
       return newState
     default:
       return newState

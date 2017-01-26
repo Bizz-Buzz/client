@@ -3,11 +3,12 @@ import url from '../requestUrl'
 
 module.exports = (state, dispatch) => {
   request
-    .post(`${url}bizz/buzz/new`)
-    .send({poster_id: state.user.user_id, bizz_id: state.bizz.bizz_id, buzz_text: state.buzz_text})
+    .get(`${url}bizz/settings`)
+    .query({bizz_id: state.bizz.bizz_id})
     .withCredentials()
     .end((err, res) => {
       console.log({res});
-      if (!err) dispatch({type: "POST_BUZZ"})
+      if (!err) dispatch({type: 'LOAD_BIZZ_SETTINGS', payload: res.body})
+      else console.log(err);
     })
 }

@@ -9,6 +9,7 @@ import Signup from './components/signup'
 import BizzList from './components/bizzList'
 import ViewBizz from './components/viewBizz'
 import FindBizz from './components/findBizz'
+import CreateBizz from './components/createBizz'
 
 var reducer = require('./reducer')
 
@@ -26,7 +27,9 @@ const initialState = {
   bizzList: [],
   allBizzList: [],
   bizz: null,
-  buzzShow: false
+  buzzShow: false,
+  followRequests: [],
+  createBizzName: ''
 }
 
 var store = createStore(reducer, initialState)
@@ -38,7 +41,8 @@ const route = Router({ default: '/404' }, [
   ['/signUp', (params) => Signup],
   ['/bizzList', (params) => BizzList],
   ['/viewBizz', (params) => ViewBizz],
-  ['/findBizz', (params) => FindBizz]
+  ['/findBizz', (params) => FindBizz],
+  ['/createBizz', (params) => CreateBizz]
 ])
 
 subscribe(() => {

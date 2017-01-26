@@ -1,9 +1,8 @@
 import React from 'react'
-
+import header from '../header'
 import postBuzz from '../../services/buzzPost'
 
 module.exports = (state, dispatch) => {
-  console.log({state});
   function buzzItem(buzz) {
       return <div className="buzzItem">
         <p className="buzzText">{buzz.buzz_text}</p>
@@ -12,13 +11,11 @@ module.exports = (state, dispatch) => {
       </div>
   }
   function buzzList(buzzList) {
-    console.log({buzzList});
     return buzzList.map((buzz) => {
       return buzzItem(buzz)
     })
   }
   function displayList() {
-    console.log(state.isLoading);
     if (state.isLoading) {
       return <h1>Loading list</h1>
     } else if (state.bizz.buzzList) {
@@ -39,8 +36,10 @@ module.exports = (state, dispatch) => {
   }
   return (
     <div className="buzzList">
+      <div className="buzzItem">
       <button className="smallButton" id="createBuzzButton" onClick={() => togglePost()}>Buzz</button>
       {displayBuzzPost()}
+      </div>
       {displayList()}
     </div>
   )
